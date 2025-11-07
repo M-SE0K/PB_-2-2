@@ -1,6 +1,7 @@
 # vue-demo
+**초급프로젝트 실습 2-2**
 
-Vue3 기반 예제 컴포넌트 모음 (Composition API 사용)
+Vue2를 Vue3 변환
 
 ## Project setup
 ```
@@ -12,7 +13,7 @@ npm install
 npm run serve
 ```
 
-개발 서버 실행 후 `http://localhost:8080` (또는 표시된 포트)에서 확인 가능합니다.
+개발 서버 실행 후 `http://localhost:8080` (또는 터미널에 표시된 포트)에서 확인 가능합니다.
 
 ### Compiles and minifies for production
 ```
@@ -26,76 +27,69 @@ npm run lint
 
 ## 컴포넌트 구조
 
-> **참고**: 각 컴포넌트를 확인하려면 `src/App.vue`에서 해당 컴포넌트를 import하여 사용하세요.  
+> **참고**: 각 컴포넌트를 확인하려면 `src/App.vue`에서 해당 컴포넌트의 주석을 해제하여 확인하세요.
+> 편의를 위해 `<div>`태그를 이용하였습니다.
+>
 > 개발 서버: `http://localhost:8080` (또는 표시된 포트)
 
 ### Example 1: 기본 인스턴스 및 바인딩
 - **E-01-instance.vue**
-  - 경로: `src/components/example1/E-01-instance.vue`
-  - 설명: Vue 인스턴스 기본 사용법 (ref를 사용한 반응형 데이터)
-  - 로컬 URL: `http://localhost:8080` (App.vue에서 현재 사용 중)
-
+  - ![example1-E01](./img/example1/example1_instance.png)
 - **E-02-reactive.vue**
-  - 경로: `src/components/example1/E-02-reactive.vue`
-  - 설명: 반응형 데이터와 computed 속성, lifecycle hook (onMounted) 사용
-
+  - ![example1-EO2](./img/example1/example1_reactive.png)
 - **E-03-binding.vue**
-  - 경로: `src/components/example1/E-03-binding.vue`
-  - 설명: v-model을 사용한 양방향 데이터 바인딩
-
+  - ![example1-E03](./img/example1/example1_binding1.png)
+  - ![example1-E03](./img/example1/example1_binding2.png)
 ### Example 2: 디렉티브
 - **E-04-directives.vue**
-  - 경로: `src/components/example2/E-04-directives.vue`
-  - 설명: Vue 디렉티브 종합 예제
-  - 기능: v-if, v-else-if, v-else, v-show, v-for, v-text, v-html, v-pre
+  - ![example2-E04](./img/example2/example2_directives.png)
 
 ### Example 3: 부모-자식 컴포넌트 통신
 - **ParentComponent.vue**
-  - 경로: `src/components/example3/ParentComponent.vue`
-  - 설명: Props 전달 및 이벤트 수신
+  - ![example3-E04](./img/example3/example3_parent-child.png)
 
 - **ChildComponent.vue**
   - 경로: `src/components/example3/ChildComponent.vue`
-  - 설명: Props 수신 및 이벤트 emit (defineProps, defineEmits)
+  - ![example3-E04](./img/example3/example3_childParent.png)
 
 ### Example 4: Provide/Inject
 - **ParentComponent.vue**
-  - 경로: `src/components/example4/ParentComponent.vue`
-  - 설명: provide를 사용한 데이터 제공
+  - ![example5-parentComponent](./img/example4/example4_parent-child.png)
 
 - **ChildComponent1.vue**
-  - 경로: `src/components/example4/ChildComponent1.vue`
-  - 설명: inject를 사용한 데이터 주입 (자식 컴포넌트 포함)
+  - ![example4-childComponent](./img/example4/example4_childComponent1.png)
 
 - **ChildComponent2.vue**
-  - 경로: `src/components/example4/ChildComponent2.vue`
-  - 설명: inject를 사용한 데이터 주입
+  - ![example4-childComponent](./img/example4/example4_childComponent2.png)
 
 ### Example 5: Options API vs Composition API
 - **E-07-Options-API.vue**
-  - 경로: `src/components/example5/E-07-Options-API.vue`
-  - 설명: Options API 스타일 (비교용으로 유지)
+  - ![example5-Options](./img/example5/example5_optionsAPI1.png)
+  - ![example5-Options](./img/example5/example5_optionsAPI2.png)
+  - ![example5-Options](./img/example5/example5_optionsAPI3.png)
 
 - **E-08-composition-api.vue**
-  - 경로: `src/components/example5/E-08-composition-api.vue`
-  - 설명: Composition API (setup 함수) 스타일
-
+  - ![example5-CompositiconAPI](./img/example5/example5_compositionAPI1.png)
+  - ![example5-CompositiconAPI](./img/example5/example5_compositionAPI2.png)
+  - ![example5-CompositiconAPI](./img/example5/example5_compositionAPI3.png)
 - **E-09-composition-API2.vue**
-  - 경로: `src/components/example5/E-09-composition-API2.vue`
-  - 설명: `<script setup>` 문법 사용
-
+  - ![example5-CompositiconAPI2](./img/example5/example5_compositionAPI2_1.png)
+  - ![example5-CompositiconAPI2](./img/example5/example5_compositionAPI2_2.png)
+  - ![example5-CompositiconAPI2](./img/example5/example5_compositionAPI2_3.png)
 ### Example 6: ref와 reactive
 - **E-10-ref.vue**
-  - 경로: `src/components/example6/E-10-ref.vue`
-  - 설명: ref를 사용한 원시 타입 반응형 데이터
+  - ![example6-ref](./img/example6/example6_ref1.png)
+  - ![example6-ref](./img/example6/example6_ref2.png)
+  - ![example6-ref](./img/example6/example6_ref3.png)
 
 - **E-11-reactive.vue**
-  - 경로: `src/components/example6/E-11-reactive.vue`
-  - 설명: reactive를 사용한 객체 반응형 데이터
+  - ![example6-reactive](./img/example6/example6_reactive1.png)
+  - ![example6-reactive](./img/example6/example6_reactive2.png)
 
 - **E-12-ref-component.vue**
-  - 경로: `src/components/example6/E-12-ref-component.vue`
-  - 설명: ref를 사용한 DOM 요소 참조
+  - ![example6-ref-component](./img/example6/example6_ref_component1.png)
+  - ![example6-ref-component](./img/example6/example6_ref_component2.png)
+
 
 ## 주요 변경 사항 (Vue2 → Vue3)
 
