@@ -50,7 +50,7 @@ npm run lint
 
 - **ChildComponent.vue**
   - 경로: `src/components/example3/ChildComponent.vue`
-  - ![example3-E04](./img/example3/example3_childParent.png)
+  - ![example3-E04](./img/example3/example3_childComponent.png)
 
 ### Example 4: Provide/Inject
 - **ParentComponent.vue**
